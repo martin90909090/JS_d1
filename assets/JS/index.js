@@ -1,4 +1,4 @@
-precio = 400000;
+let precio = document.getElementById('precio-inicial').textContent;
+let precioSpan = document.querySelector(".precio-inicial");
 
-precioSpan = document.querySelector(".precio-inicial");
 precioSpan.innerHTML = precio;
