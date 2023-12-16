@@ -6,3 +6,4 @@ let valor_total = (precio * cantidad);
 t_value.innerHTML = valor_total;
 
 console.log(valor_total);
+alert(valor_total);
