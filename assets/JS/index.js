@@ -13,7 +13,7 @@ btn_add.addEventListener('click', (event) => {
     event.preventDefault;
     cantidad++;
     document.getElementById('cantidad').textContent = cantidad;
-    t_value.textContent = precio * cantidad;
+    t_value.textContent = valor_total;
     alert(valor_total);
 });
 
@@ -22,11 +22,10 @@ btn_less.addEventListener('click', (event) => {
     if(cantidad > 0) {
     cantidad--;
     document.getElementById('cantidad').textContent = cantidad;
-    t_value.textContent = precio * cantidad;
+    t_value.textContent = valor_total;
     }
 });
 
 t_value.innerHTML = valor_total;
 
 console.log(valor_total);
-alert(valor_total);
