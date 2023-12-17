@@ -13,12 +13,17 @@ btn_add.addEventListener('click', (event) => {
     event.preventDefault;
     cantidad++;
     document.getElementById('cantidad').textContent = cantidad;
+    t_value.textContent = precio * cantidad;
+    alert(valor_total);
 });
 
 btn_less.addEventListener('click', (event) => {
     event.preventDefault;
+    if(cantidad > 0) {
     cantidad--;
     document.getElementById('cantidad').textContent = cantidad;
+    t_value.textContent = precio * cantidad;
+    }
 });
 
 t_value.innerHTML = valor_total;
