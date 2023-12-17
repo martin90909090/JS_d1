@@ -9,8 +9,17 @@ function display() {
     alert("Clickeado");
 }
 
-btn_add.addEventListener('click', display);
-btn_less.addEventListener('click', display);
+btn_add.addEventListener('click', (event) => {
+    event.preventDefault;
+    cantidad++;
+    document.getElementById('cantidad').textContent = cantidad;
+});
+
+btn_less.addEventListener('click', (event) => {
+    event.preventDefault;
+    cantidad--;
+    document.getElementById('cantidad').textContent = cantidad;
+});
 
 t_value.innerHTML = valor_total;
 
