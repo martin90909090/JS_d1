@@ -1,31 +1,22 @@
-const precio = document.getElementById('precio-inicial').textContent;
-let cantidad = document.getElementById("cantidad").textContent;
-let t_value = document.getElementById('valor-total').textContent;
-let btn_add = document.querySelector('#add');
-let btn_less = document.querySelector('#less');
-let valor_total = (precio * cantidad);
-
-function display() {
-    alert("Clickeado");
-}
+const precio = 40000
+let cantidad = 0
+const precioSpan = document.getElementById("precio-inicial").innerHTML = precio
+const cantidadSpan = document.getElementById("cantidad")
+let t_value = document.getElementById("valor-total")
+let btn_add = document.querySelector("#add");
+let btn_less = document.querySelector("#less");
 
 btn_add.addEventListener('click', (event) => {
-    event.preventDefault;
     cantidad++;
-    document.getElementById('cantidad').textContent = cantidad;
-    t_value.textContent = valor_total;
-    alert(valor_total);
+    cantidadSpan.innerHTML = cantidad;
+    t_value.innerHTML = (precio * cantidad);
 });
 
 btn_less.addEventListener('click', (event) => {
-    event.preventDefault;
-    if(cantidad > 0) {
-    cantidad--;
-    document.getElementById('cantidad').textContent = cantidad;
-    t_value.textContent = valor_total;
+    if (cantidad > 0){
+        cantidad--;
+        cantidadSpan.innerHTML = cantidad;
+        t_value.innerHTML = (precio * cantidad);
     }
 });
 
-t_value.innerHTML = valor_total;
-
-console.log(valor_total);
